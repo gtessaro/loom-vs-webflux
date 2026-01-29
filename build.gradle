@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.3'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.seuapp'
+version = '0.0.5'
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+repositories { mavenCentral() }
+
+dependencyManagement {
+  imports {
+    mavenBom "org.springframework.cloud:spring-cloud-dependencies:2023.0.4"
+  }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'       // MVC + Loom
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'   // WebFlux comparativo
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.cloud:spring-cloud-starter-consul-config'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
+}
+
+tasks.withType(Test).configureEach { useJUnitPlatform() }
