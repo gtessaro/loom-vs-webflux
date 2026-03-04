@@ -23,7 +23,7 @@ export const options = {
 export default function () {
   const url = "http://localhost:8080/v1/gateway/process";
   const payload = JSON.stringify({
-    value: 350,
+    value: 800,
     customerId: "C1",
     data: {
       field001: "abc",
