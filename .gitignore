@@ -35,3 +35,10 @@
 /.gradle/8.5/fileHashes/fileHashes.lock
 /.gradle/buildOutputCleanup/outputFiles.bin
 /.idea/sonarlint/issuestore/2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3
+/.gradle/buildOutputCleanup/cache.properties
+/.gradle/file-system.probe
+/.gradle/8.5/dependencies-accessors/gc.properties
+/.gradle/8.5/gc.properties
+/.gradle/vcs-1/gc.properties
+/.gradle/8.5/fileChanges/last-build.bin
+*.class
